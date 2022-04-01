@@ -1,8 +1,8 @@
 # recipe-randomizer
 
-Let's you once and for all randomize your meals for whatever timeframe you can think about.
+## Let's you once and for all randomize your meals for whatever timeframe you can think about.
 
-Features:
+### Features planned:
 
 - [ ] You can copy and paste recipes from your favorite recipe website directly into the app
 - [ ] The app saves recipes you've already eaten as a history to not repeat your recipes within a given timeframe
@@ -15,25 +15,6 @@ Features:
 - [ ] Also pricepoints of recipes can be added
 - [ ] If you want, you can also randomize recipes for a given date in the future or even for a timeframe (multiple dates)
 - [ ] Share your accounts with your family, friends or whoever you like
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
