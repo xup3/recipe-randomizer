@@ -1,5 +1,12 @@
 import { defineStore } from "pinia";
 
+type Recipe = {
+  id: number;
+  heading: string;
+  description: string;
+  img: string;
+};
+
 export const useRecipeStore = defineStore({
   id: "recipes",
   state: () => ({
@@ -46,6 +53,11 @@ export const useRecipeStore = defineStore({
     getRecipeById: (state) => {
       return (recipeId: string) =>
         state.recipes.find((recipe) => recipe.id.toString() === recipeId);
+    },
+  },
+  actions: {
+    removeRecipe(recipe: Recipe) {
+      this.recipes.splice(this.recipes.indexOf(recipe), 1);
     },
   },
 });

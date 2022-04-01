@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RecipeDetails from "../components/RecipeDetails.vue";
+import RecipeListItem from "../components/RecipeListItem.vue";
 import { useRecipeStore } from "@/stores/recipes";
 
 type Recipe = {
@@ -18,7 +18,7 @@ const recipes: Recipe[] = store.$state.recipes;
     <h2 class="mb-4 font-bold text-2xl">This is the recipe page</h2>
 
     <div class="recipe-container">
-      <RecipeDetails
+      <RecipeListItem
         v-for="recipe in recipes"
         :recipe="recipe"
         v-bind:key="recipe.id"

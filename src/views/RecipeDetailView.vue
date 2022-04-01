@@ -11,11 +11,13 @@ const recipe = store.getRecipeById(props.id);
 </script>
 
 <template>
-  <div class="recipe_view">
-    <h1>This is the page for recipe id: {{ props.id }}</h1>
+  <article class="recipe-detail-view">
+    <img :src="recipe?.img" :alt="recipe?.heading" />
 
-    {{ recipe }}
+    <h1>{{ recipe?.heading }}</h1>
+
+    <p>{{ recipe?.description }}</p>
 
     <div @click="$router.back()">Back</div>
-  </div>
+  </article>
 </template>
