@@ -3,6 +3,8 @@ export type Recipe = {
   heading: string;
   description: string;
   img: string;
-  planned: Date;
-  history: Date | undefined;
+  planned: Dates;
+  history: Dates;
 };
+
+export type Dates = Date[] | null;

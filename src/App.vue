@@ -9,10 +9,14 @@ console.log("App created");
 onMounted(() => {
   console.log("App mounted");
 });
+
+const whattoeat = () => {
+  console.log("What to eat?");
+};
 </script>
 
 <template>
-  <header>
+  <header class="bg-white sticky top-0 z-10 pt-4">
     <div class="wrapper">
       <HelloWorld msg="Recipe Randomizer" />
 
@@ -28,6 +32,16 @@ onMounted(() => {
   <main>
     <RouterView />
   </main>
+
+  <footer class="bg-white sticky bottom-0 pb-4 pt-4">
+    <button
+      type="button"
+      @click="whattoeat"
+      class="w-full text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-lg px-5 py-2.5 text-center mt-2"
+    >
+      Tell me what I eat today
+    </button>
+  </footer>
 </template>
 
 <style>
@@ -36,7 +50,7 @@ onMounted(() => {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   font-weight: normal;
 }
 

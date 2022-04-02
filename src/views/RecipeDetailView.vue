@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { computed } from "vue";
 import { useRecipeStore } from "@/stores/recipes";
 
 const props = defineProps<{
@@ -8,6 +8,10 @@ const props = defineProps<{
 
 const store = useRecipeStore();
 const recipe = store.getRecipeById(props.id);
+
+const historyDates = computed(() => {
+  return recipe?.history;
+});
 </script>
 
 <template>
@@ -17,6 +21,11 @@ const recipe = store.getRecipeById(props.id);
     <h1>{{ recipe?.heading }}</h1>
 
     <p>{{ recipe?.description }}</p>
+
+    <p>
+      You've cooked this recipe on these Dates:
+      {{ historyDates?.toLocaleString() }}
+    </p>
 
     <div @click="$router.back()">Back</div>
   </article>
