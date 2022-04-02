@@ -9,15 +9,12 @@ const inputChangeHandler = (e: Event): void => {
 </script>
 
 <template>
-  <div>
-    <label>
-      Search:
-      <input
-        type="text"
-        name="recipe_search"
-        v-model="recipe_search"
-        @change="inputChangeHandler"
-      />
-    </label>
-  </div>
+  <input
+    type="text"
+    class="focus:ring-indigo-500 focus:border-indigo-500 pl-2 pr-12 sm:text-sm border-gray-300 rounded-md mt-4 relative block w-full shadow-sm"
+    name="recipe_search"
+    placeholder="Search a recipe"
+    v-model="recipe_search"
+    @change="inputChangeHandler"
+  />
 </template>
