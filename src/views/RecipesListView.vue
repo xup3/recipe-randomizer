@@ -1,13 +1,7 @@
 <script setup lang="ts">
 import RecipeListItem from "../components/RecipeListItem.vue";
 import { useRecipeStore } from "@/stores/recipes";
-
-type Recipe = {
-  id: number;
-  heading: string;
-  description: string;
-  img: string;
-};
+import type { Recipe } from "@/types";
 
 const store = useRecipeStore();
 const recipes: Recipe[] = store.$state.recipes;

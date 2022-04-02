@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
-
-type Recipe = {
-  id: number;
-  heading: string;
-  description: string;
-  img: string;
-};
+import type { Recipe } from "@/types";
 
 const props = defineProps<{
   recipe: Recipe;
